@@ -8,5 +8,30 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <!-- n8n Chat Widget Styles -->
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+
+<!-- n8n Chat Widget Script -->
+<script type="module">
+  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+  createChat({
+    webhookUrl: 'http://localhost:5678/webhook/c76397d8-0f32-4dbc-94c2-1cf821593275/chat',
+    target: '#n8n-chat',
+    mode: 'window',
+    initialMessages: [
+      "Hello! 👋 I’m your AI Addiction Recovery Support Assistant."
+    ],
+    i18n: {
+      en: {
+        title: 'Recovery Support Assistant',
+        subtitle: 'Here to listen without judgment',
+        inputPlaceholder: 'Type your message...',
+      },
+    },
+  });
+</script>
+
+<div id="n8n-chat"></div>
   </body>
 </html>
