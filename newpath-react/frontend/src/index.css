@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-leaf-50: #f4f8f5;
+  --color-leaf-100: #e3f1ea;
+  --color-leaf-500: #2f8f6b;
+  --color-leaf-700: #236f53;
+}
+
+body {
+  @apply bg-leaf-50 text-slate-800 antialiased;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
